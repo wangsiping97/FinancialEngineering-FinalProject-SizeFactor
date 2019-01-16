@@ -188,6 +188,6 @@ for i in range(13):
 for i in range(10):
     Mon_Illiqs.append(temp[i]/13)
 
-table1 = {'Rt_EW': Rt_EWs, 'Rt_VW': Rt_VWs, 'log_ME': log_MEs, 'log_BM': log_BMs, 'R_1': R_1s, 'R——12': R_12s, 'Mon_Illiq': Mon_Illiqs}
+table1 = {'Rt_EW': Rt_EWs, 'Rt_VW': Rt_VWs, 'log_ME': log_MEs, 'log_BM': log_BMs, 'R_1': R_1s, 'R_12': R_12s, 'Mon_Illiq': Mon_Illiqs}
 table1 = pd.DataFrame(table1, index = port)
 table1.to_csv('table1.csv')
