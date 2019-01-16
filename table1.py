@@ -31,6 +31,7 @@ for i in range(1,11):
     x = ('Group%d' %i)
     port.append(x)
 
+
 # Compute Rt_EWs
 
 Rt_EWs = []
@@ -50,6 +51,7 @@ for i in range(13):
     start += 12
 for i in range(10):
     Rt_EWs.append(temp[i]/13 * 100)
+
 
 # Compute Rt_VWs
 
@@ -76,7 +78,6 @@ for i in range(13):
 for i in range(10):
     Rt_VWs.append(temp[i]/13 * 100)
 
-# Compute beta
 
 # Compute log-ME
 
@@ -133,7 +134,7 @@ R_1s = []
 temp = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 start = 66
-for i in range(13):
+for i in range(12):
     end = start + 12
     size_data = sizeall.iloc[start]
     yield_data = mon_return.iloc[start + 7]
@@ -144,7 +145,27 @@ for i in range(13):
         temp[m - 1] += Yr_port_Rt['Group%d'%m]
     start += 12
 for i in range(10):
-    R_1s.append(temp[i]/13 * 100)
+    R_1s.append(temp[i]/12 * 100)
+
+
+# Compute R_12 (returns on December) with equal-weighted porfolios
+
+R_12s = []
+temp = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+start = 66
+for i in range(13):
+    end = start + 12
+    size_data = sizeall.iloc[start]
+    yield_data = mon_return.iloc[start + 6]
+    size_quantile = pd.qcut(size_data,10,labels = label_size)
+    grouped = yield_data.groupby([size_quantile])
+    Yr_port_Rt = grouped.mean() # equal-weighted
+    for m in range(1, 11):
+        temp[m - 1] += Yr_port_Rt['Group%d'%m]
+    start += 12
+for i in range(10):
+    R_12s.append(temp[i]/13 * 100)
 
 
 # Compute Mon_Illiq
@@ -167,6 +188,6 @@ for i in range(13):
 for i in range(10):
     Mon_Illiqs.append(temp[i]/13)
 
-table1 = {'Rt_EWs': Rt_EWs, 'Rt_VWs': Rt_VWs, 'log_MEs': log_MEs, 'log_BMs': log_BMs, 'R_1s': R_1s, 'Mon_Illiqs': Mon_Illiqs}
+table1 = {'Rt_EW': Rt_EWs, 'Rt_VW': Rt_VWs, 'log_ME': log_MEs, 'log_BM': log_BMs, 'R_1': R_1s, 'R——12': R_12s, 'Mon_Illiq': Mon_Illiqs}
 table1 = pd.DataFrame(table1, index = port)
-table1.to_csv('test.csv')
+table1.to_csv('table1.csv')
