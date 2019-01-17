@@ -1,5 +1,5 @@
 # FinancialEngineering-FinalProject-SizeFactor
-This is the final project of Financial Engineering (Tsinghua SEM, 2018 fall) on size factor in Chine. In this research, we used the stock information from China’s A-share market. The data base covers 3,631 stocks on China’s market, and the test period is from January 2005 to June 2018. 
+This is the final project of Financial Engineering (Tsinghua SEM, 2018 fall) on size factor in China. In this research, we used the stock information from China’s A-share market. The data base covers 3,631 stocks on China’s market, and the test period is from January 2005 to June 2018. 
 
 # Getting Start
 ## Requirements
