@@ -82,7 +82,7 @@ Since the monthly return data ranges from 2000 to 2018 and the three factor data
 - The output is computed by `figure4.py`.
 
 ## Lost-stop Strategy
-- `table9.csv` (though not showed on the paper) displays the result of the Ave_Rt, Alpha, Sharpe Ratio and Max Drawdown, and `figure5.png` is the Time Series Plot of the Monthly Compounded Returns of the portfolio of longing Group-2 and shorting Group-10 with a `lost-stop strategy` of eliminating stocks in `Group-2` that have returns `less than -0.1` in the previous `3` months when adjusting our positions each month. The variables abovementioned, `Group-2`, `less than -0.1` and `3` can all be adjusted. 
+- `table9.csv` (though not shown on the paper) displays the result of the Ave_Rt, Alpha, Sharpe Ratio and Max Drawdown, and `figure5.png` is the Time Series Plot of the Monthly Compounded Returns of the portfolio of longing Group-2 and shorting Group-10 with a `lost-stop strategy` of eliminating stocks in `Group-2` that have returns `less than -0.1` in the previous `3` months when adjusting our positions each month. The variables abovementioned, `Group-2`, `less than -0.1` and `3` can all be adjusted. 
 - The code of this simple lost-stop strategy is as following (take the portfolio of longing size-2 and shorting size-10 and `Group-2`, `less than -0.1` and `3` for an example): 
 ```
 for i in range(60, 221): # Months since Jan. 2005
