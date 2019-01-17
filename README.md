@@ -82,7 +82,7 @@ Since the monthly return data ranges from 2000 to 2018 and the three factor data
 - The output is computed by `figure4.py`.
 
 ## Lost-stop Strategy
-- `table9.csv` (though not appeared on the paper) displays the result of the Ave_Rt, Alpha, Sharpe Ratio and Max Drawdown, and `figure5.png` is the Time Series Plot of the Monthly Compounded Returns of the portfolio of longing Group-2 and shorting Group-10 with a `lost-stop strategy` of eliminating stocks in `Group-2` that have returns `less than -0.1` in the previous `3` months when adjusting our positions each month. The variables abovementioned, `Group-2`, `less than -0.1` and `3` can all be adjusted. 
+- `table9.csv` (though not showed on the paper) displays the result of the Ave_Rt, Alpha, Sharpe Ratio and Max Drawdown, and `figure5.png` is the Time Series Plot of the Monthly Compounded Returns of the portfolio of longing Group-2 and shorting Group-10 with a `lost-stop strategy` of eliminating stocks in `Group-2` that have returns `less than -0.1` in the previous `3` months when adjusting our positions each month. The variables abovementioned, `Group-2`, `less than -0.1` and `3` can all be adjusted. 
 - The code of this simple lost-stop strategy is as following (take the portfolio of longing size-2 and shorting size-10 and `Group-2`, `less than -0.1` and `3` for an example): 
 ```
 for i in range(60, 221): # Months since Jan. 2005
@@ -95,10 +95,10 @@ for i in range(60, 221): # Months since Jan. 2005
     unit_2 = unit_2.loc[unit_2[3] >= -.1]
     unit_2 = unit_2.loc[unit_2[2] >= -.1]
     unit_10 = a.iloc[unit * 9:]
-    revenue[i - 60] = np.mean(unit_2[5]) - np.mean(unit_10[5]) # Compute the strategy monthly return
+    revenue[i - 60] = np.mean(unit_2[5]) - np.mean(unit_10[5]) # Compute the strategy's monthly return
 ```
 - The outputs are computed by `lost_stop.py`. 
 
-#Author
+# Author
 - Kai Xiao, Haotian Xu, Siping Wang
-- Github: https://github.com/wangsiping97
+- Github: [@wangsiping97](https://github.com/wangsiping97)
