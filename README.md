@@ -1,5 +1,6 @@
 # FinancialEngineering-FinalProject-SizeFactor
-This is the Financial Engineering Final Project for size factor 
+This is the final project of Financial Engineering (Tsinghua SEM, 2018 fall) on size factor in Chine. In this research, we used the stock information from China’s A-share market. The data base covers 3,631 stocks on China’s market, and the test period is from January 2005 to June 2018. 
+
 # Getting Start
 ## Requirements
 - python 3.7.1
@@ -17,7 +18,7 @@ git clone https://github.com/wangsiping97/FinancialEngineering-FinalProject-Size
 ## Setup Data
 Copy `CadeDataAll.mat` to `FinancialEngineering-FinalProject-SizeFactor` directory.
 
-To facilitate the loading with pandas, we transformed `ThreeFactorData.xlsx` to csv format(i.e., `ThreeFactorData.csv`) using excel.
+To facilitate the loading with pandas, we transformed `ThreeFactorData.xlsx` to csv format (i.e., `ThreeFactorData.csv`) using excel.
 
 Since the monthly return data ranges from 2000 to 2018 and the three factor data ranges from 2005 to 2018, to match the index conveniently, we added 60 empty rows before `ThreeFactorData.xlsx` and get `Market.csv`. 
 
@@ -27,7 +28,7 @@ Since the monthly return data ranges from 2000 to 2018 and the three factor data
 - `post_yield.csv`, `post_beta.csv`, `post_betas.csv` are three intermediate files output to reduce the operation, output by the program `ComputePostBeta.py`.
 - The correlation coefficient of size and beta is one of the data mentioned in the report, output by the program `CorrelationCoefficient.py`.
 
-## table1
+## Table1
 - `table1.csv` is the result of Single Sorting and is output by the program `table1.py`.
 - The output contains 7 columns: 
     - `Rt_EW`: Average Monthly Returns of Equal Weighted, is computed from line 28 to line 46
