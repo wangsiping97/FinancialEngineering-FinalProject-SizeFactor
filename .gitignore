@@ -1,4 +1,6 @@
 *.mat
-*.csv
+table*.csv
 *.xlsx
 *.docx
+*.png
+post*.csv
