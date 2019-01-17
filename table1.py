@@ -1,15 +1,8 @@
-'''
-Created on Jan 15th, 2019
-
-@author: Siping Wang
-'''
-
 # -*- coding: utf-8 -*-
 import pandas as pd
 from pandas import DataFrame,Series
 import scipy.io as sio
 import numpy as np
-# import statsmodels.api as sm
 
 data = sio.loadmat("CaseDataAll.mat")
 
@@ -31,8 +24,6 @@ for i in range(1,11):
     x = ('Group%d' %i)
     port.append(x)
 
-
-# Compute Rt_EWs
 
 Rt_EWs = []
 temp = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
