@@ -32,7 +32,7 @@ Since the monthly return data ranges from 2000 to 2018 and the three factor data
 - `table1.csv` is the result of Single Sorting and is output by the program `table1.py`.
 - The output contains 7 columns: 
     - `Rt_EW`: Average Monthly Returns of Equal Weighted, is computed from line 28 to line 46
-    - `Rt_VW`: Average Monthlyl Returns of Value Weighted, is computed from line 49 to line 72
+    - `Rt_VW`: Average Monthly Returns of Value Weighted, is computed from line 49 to line 72
     - `log_ME`: Average Log of Market Equity, is computed from line 75 to line 96
     - `log_BM`: Average Log of Book to Market Ratio, is computed from line 99 to line 121
     - `R_1`: Average Returns in January, is computed from line 124 to line 141
