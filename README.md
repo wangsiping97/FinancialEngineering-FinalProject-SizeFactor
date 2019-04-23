@@ -1,5 +1,5 @@
-# FinancialEngineering-FinalProject-SizeFactor
-This is the final project of Financial Engineering (Tsinghua SEM, 2018 fall) on size factor in China. In this research, we used the stock information from China’s A-share market. The data base covers 3,631 stocks on China’s market, and the test period is from January 2005 to June 2018. 
+# Exploring Size Effect in China’s A-Share Market
+In this research, we used the stock information from China’s A-share market. The data base covers 3,631 stocks on China’s market, and the test period is from January 2005 to June 2018. 
 
 # Getting Start
 ## Requirements
@@ -13,7 +13,7 @@ This is the final project of Financial Engineering (Tsinghua SEM, 2018 fall) on 
 ## Clone Project
 Run `Terminal` (for MacOS or Linux) / `Git Bash` (for Windows). Navigate to a proper directory. Clone our sever-side repository using:
 ``` 
-git clone https://github.com/wangsiping97/FinancialEngineering-FinalProject-SizeFactor.git
+git clone https://github.com/wangsiping97/SizeFactor-in-China.git
 ```
 ## Setup Data
 Copy `CadeDataAll.mat` to `FinancialEngineering-FinalProject-SizeFactor` directory.
@@ -100,5 +100,4 @@ for i in range(60, 221): # Months since Jan. 2005
 - The outputs are computed by `lost_stop.py`. 
 
 # Author
-- Kai Xiao, Haotian Xu, Siping Wang
 - Github: [@wangsiping97](https://github.com/wangsiping97)

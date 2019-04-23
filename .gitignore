@@ -4,3 +4,4 @@ table*.csv
 *.docx
 *.png
 post*.csv
+/.idea
